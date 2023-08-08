@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "746006924239",
+    "project_id": "complaint-3b85b",
+    "storage_bucket": "complaint-3b85b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:746006924239:android:94e13a1e6ae8b8a56160ba",
+        "android_client_info": {
+          "package_name": "com.aldeadavila.complaint"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "746006924239-duqncjsk1qghv6rljfs72een2jfrgr4n.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKiAmgtnfZClSIrTjwfHF511wQGq4bcII"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "746006924239-duqncjsk1qghv6rljfs72een2jfrgr4n.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
