@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.aldeadavila.complaint.model.User
+import com.google.firebase.auth.AuthCredential
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -14,6 +15,25 @@ import kotlinx.coroutines.launch
 class LoginScreenViewModel: ViewModel() {
     private val auth: FirebaseAuth = Firebase.auth
     private val _loading = MutableLiveData(false)
+
+    fun signInWithGoogleCredential(credential: AuthCredential, home: () -> Unit) =
+        viewModelScope.launch {
+            try {
+                auth.signInWithCredential(credential)
+                    .addOnCompleteListener() { task ->
+                        if (task.isSuccessful) {
+                            Log.d("login", "Logueado con Google correcto")
+                            home()
+                        }
+                    }.addOnFailureListener{
+                        Log.d("login", "Fallo al loguear con Google")
+                    }
+            }
+            catch (ex:Exception) {
+                Log.d("login", "Excepción  al loguear con Google: ${ex.localizedMessage}")
+            }
+
+        }
 
     fun signInWithEmailAndPassword(email:String, password:String, home: () -> Unit)
     = viewModelScope.launch {

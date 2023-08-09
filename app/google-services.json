@@ -14,7 +14,15 @@
       },
       "oauth_client": [
         {
-          "client_id": "746006924239-duqncjsk1qghv6rljfs72een2jfrgr4n.apps.googleusercontent.com",
+          "client_id": "746006924239-t9a8cbfb02m4na0lrk1jbaght7537jpq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.aldeadavila.complaint",
+            "certificate_hash": "371516fbebe27b88b97f68ae41231e38dc31ab73"
+          }
+        },
+        {
+          "client_id": "746006924239-q08v583vl9d0p993nenmsr5q0c09i3pc.apps.googleusercontent.com",
           "client_type": 3
         }
       ],

@@ -69,11 +69,14 @@ dependencies {
     implementation("com.google.firebase:firebase-auth-ktx")
     implementation("com.google.firebase:firebase-firestore-ktx")
 
+    //Google service
+    implementation("com.google.android.gms:play-services-auth:20.6.0")
+
     //Hilt
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     //Iconos extendidos
-    implementation("androidx.compose.material:material-icons-extended:1.3.1")
+    implementation("androidx.compose.material:material-icons-extended:1.5.0")
 
 
     testImplementation("junit:junit:4.13.2")
