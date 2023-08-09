@@ -25,6 +25,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.aldeadavila.complaint.navigation.ScreenRoutes
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.delay
 
 @Composable
@@ -41,7 +42,18 @@ fun SplashScreen(navController: NavController) {
             )
         )
         delay(3500L)
-        navController.navigate(ScreenRoutes.LoginScreen.name)
+                // siempre entra al login
+                navController.navigate(ScreenRoutes.LoginScreen.name)
+        //si estás autenticado no te muestra el login
+        /*if(FirebaseAuth.getInstance().currentUser?.email.isNullOrEmpty()) {
+            navController.navigate(ScreenRoutes.LoginScreen.name)
+        } else {
+            navController.navigate(ScreenRoutes.HomeScreen.name){
+                popUpTo(ScreenRoutes.SplashScreen.name){
+                    inclusive = true
+                }
+            }
+        }*/
     }
     val color = MaterialTheme.colorScheme.primary
     Surface(
