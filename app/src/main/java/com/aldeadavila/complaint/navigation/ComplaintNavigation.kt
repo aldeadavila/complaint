@@ -8,6 +8,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.aldeadavila.complaint.screens.SplashScreen
 import com.aldeadavila.complaint.screens.home.HomeScreen
+import com.aldeadavila.complaint.screens.image.ImageScreen
 import com.aldeadavila.complaint.screens.login.LoginScreen
 
 @Composable
@@ -24,6 +25,10 @@ fun ComplaintNavigation() {
         }
         composable(ScreenRoutes.LoginScreen.name) {
             LoginScreen(navController = navController)
+        }
+
+        composable(ScreenRoutes.ImageScreen.name) {
+            ImageScreen(navController = navController)
         }
 
     }

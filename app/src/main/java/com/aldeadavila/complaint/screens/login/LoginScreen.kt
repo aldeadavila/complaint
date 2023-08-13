@@ -73,7 +73,7 @@ fun LoginScreen(navController: NavController,
             val account = task.getResult(ApiException::class.java)
             val credential = GoogleAuthProvider.getCredential(account.idToken, null)
             viewModel.signInWithGoogleCredential(credential){
-                navController.navigate(ScreenRoutes.HomeScreen.name)
+                navController.navigate(ScreenRoutes.ImageScreen.name)
             }
         } catch (ex:Exception){
             Log.d("login", "GoogleSignIn lanzó una excepción")
@@ -93,7 +93,7 @@ fun LoginScreen(navController: NavController,
                     email, password ->
                     Log.d("login", "Logueando con $email y $password")
                     viewModel.signInWithEmailAndPassword(email, password){
-                        navController.navigate(ScreenRoutes.HomeScreen.name)
+                        navController.navigate(ScreenRoutes.ImageScreen.name)
                     }
                 }
             } else {
@@ -103,7 +103,7 @@ fun LoginScreen(navController: NavController,
                         email, password ->
                     Log.d("create account", "Creando cuenta con $email y $password")
                     viewModel.createUserWithEmailAndPassword(email, password){
-                        navController.navigate(ScreenRoutes.HomeScreen.name)
+                        navController.navigate(ScreenRoutes.ImageScreen.name)
                     }
                 }
             }
